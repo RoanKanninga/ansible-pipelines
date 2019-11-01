@@ -40,6 +40,8 @@ Unfortunately the Ansible rsync wrapper module contains a few bugs.
 These bugs must be patched on the control host:
 
  - [Bugfix #33998 for bug #17492: Do not prepend PWD when path is in form user@server:path or server:path](https://github.com/ansible/ansible/pull/33998)
+possible location for the synchronize script is:
+/usr/local/Cellar/ansible/2.4.3.0/libexec/lib/python2.7/site-packages/ansible/plugins/action/synchronize.py
  - [Bugfix #41332 for bug #24365: Do not disable SSH connection sharing](https://github.com/ansible/ansible/pull/41332)
 possible location for the synchronize script is:
 /usr/local/Cellar/ansible/2.4.3.0/libexec/lib/python2.7/site-packages/ansible/modules/files/synchronize.py 
