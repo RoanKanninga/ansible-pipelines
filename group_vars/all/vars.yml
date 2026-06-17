@@ -185,6 +185,7 @@ analysis_folders:
   nf_ngs_dna:
     tmp:
       - logs
+      - nextflow
       - projects
       - projects/DRAGEN
       - projects/NGS_DNA
