@@ -215,7 +215,7 @@ group_subfolder_structure:
   ######################################################################################################################
   - group: umcg-lab
     lfs: tmp05
-    mode: "{{ MODE_2750_HARD }}"
+    mode: "{{ MODE_2770_HARD }}"
     owner: umcg-lab-dm
     subfolders:
       - logs
@@ -223,7 +223,7 @@ group_subfolder_structure:
     machines: "{{ groups['user_interface'] }}"
   - group: umcg-lab
     lfs: tmp15
-    mode: "{{ MODE_2750_HARD }}"
+    mode: "{{ MODE_2770_HARD }}"
     owner: umcg-lab-dm
     subfolders:
       - logs
