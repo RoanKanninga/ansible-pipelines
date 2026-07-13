@@ -95,6 +95,54 @@ group_subfolder_structure:
             | union(analysis_folders['trendanalysis']['prm']) }}"
     machines: "{{ groups['chaperone'] }}"
   ######################################################################################################################
+  # umcg-gsad group
+  ######################################################################################################################
+  - group: umcg-gsad
+    lfs: tmp05
+    mode: "{{ MODE_2770_HARD }}"
+    owner: umcg-gsad-dm
+    subfolders: "{{ analysis_folders['AGCT']['tmp']
+            | union(analysis_folders['GAP']['tmp']) }}"
+    machines: "{{ groups['user_interface'] }}"
+  - group: umcg-gsad
+    lfs: dat05
+    mode: "{{ MODE_2770_HARD }}"
+    owner: umcg-gsad-dm
+    subfolders: "{{ analysis_folders['AGCT']['dat']
+            | union(analysis_folders['GAP']['dat']) }}"
+    machines: "{{ groups['chaperone'] }}"
+  - group: umcg-gsad
+    lfs: prm05
+    mode: "{{ MODE_2750_HARD }}"
+    owner: umcg-gsad-dm
+    subfolders: "{{ analysis_folders['AGCT']['prm']
+            | union(analysis_folders['GAP']['prm']) }}"
+    machines: "{{ groups['chaperone'] }}"
+  ######################################################################################################################
+  # umcg-gap group
+  ######################################################################################################################
+  - group: umcg-gap
+    lfs: tmp05
+    mode: "{{ MODE_2770_HARD }}"
+    owner: umcg-gap-dm
+    subfolders: "{{ analysis_folders['AGCT']['tmp']
+            | union(analysis_folders['GAP']['tmp']) }}"
+    machines: "{{ groups['user_interface'] }}"
+  - group: umcg-gap
+    lfs: dat05
+    mode: "{{ MODE_2770_HARD }}"
+    owner: umcg-gap-dm
+    subfolders: "{{ analysis_folders['AGCT']['dat']
+            | union(analysis_folders['GAP']['dat']) }}"
+    machines: "{{ groups['chaperone'] }}"
+  - group: umcg-gap
+    lfs: prm05
+    mode: "{{ MODE_2750_HARD }}"
+    owner: umcg-gap-dm
+    subfolders: "{{ analysis_folders['AGCT']['prm']
+            | union(analysis_folders['GAP']['prm']) }}"
+    machines: "{{ groups['chaperone'] }}"
+  ######################################################################################################################
   # umcg-gst group
   ######################################################################################################################
   - group: umcg-gst
@@ -525,12 +573,10 @@ group_module_versions:
   umcg-gd:
     NGS_Automated:
       default: 4.6.0  # Default NGS_Automated version.
-      NGS_Demultiplexing: 4.2.0
     nf_ngs_dna: 1.4.0
     ConcordanceCheck: 3.0.0
     ngs-utils: 24.02.2
     vip: v9.2.0
-    NGS_Demultiplexing: 2.5.4
     Trendanalysis: 2.1.0
   umcg-genomescan:
     NGS_Automated:
@@ -562,7 +608,7 @@ group_module_versions:
     ngs-utils: 24.03.1
   umcg-lab:
     NGS_Automated:
-      default: 4.5.0
+      default: 4.6.0
 crontabs:
   ######################################################################################################################
   # umcg-atd group
