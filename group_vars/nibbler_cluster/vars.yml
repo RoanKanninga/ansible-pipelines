@@ -40,13 +40,10 @@ group_subfolder_structure: [
 #
 # Sources, software and reference data to install/fetch.
 #
-public_sources: [
-  'g/GCCcore/isl-0.19.tar.bz2',
-  'l/libtool/libtool-2.4.6.tar.gz',
-]
+public_sources: []
 private_sources: []
 refdata: []
 static_easyconfigs:
-  - 'c/cluster-utils/cluster-utils-v26.01.1-GCCcore-13.3.0.eb'
+  - 'c/cluster-utils/cluster-utils-v26.07.1-GCCcore-13.3.0.eb'
   - 'd/depad-utils/depad-utils-v26.04.3.eb'
 ...
