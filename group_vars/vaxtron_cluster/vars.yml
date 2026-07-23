@@ -11,7 +11,7 @@
 stack_prefix: 'vt'
 #
 # Versions of components of our HPC environment, which is managed using Lua+Lmod+EasyBuild.
-# NOTE: when introducing a new version number here,
+# NOTE: when introducing a new version number here for Lua or Lmod,
 #       please make sure to add corresponding values in group_vars/all/*.yml
 #
 lua_version: '5.4.6'
@@ -20,23 +20,6 @@ lmod_version: '8.7.32'
 easybuild_version: '5.2.0'
 eb_user: umcg-envsync
 eb_group: umcg-depad
-#
-# Group folder structures to construct on shared storage systems.
-#
-group_subfolder_structure: [
-  { group: 'umcg-atd',
-    lfs: 'tmp02',
-    mode: "{{ MODE_2770_HARD }}",
-    owner: 'umcg-atd-dm',
-    subfolders: ['generatedscripts', 'logs', 'projects', 'rawdata', 'Samplesheets', 'tmp'],
-    machines: "{{ groups['user_interface'] }}" },
-#  { group: 'umcg-atd',
-#    lfs: 'prm01',
-#    mode: "{{ MODE_2750_HARD }}",
-#    owner: 'umcg-atd-dm',
-#    subfolders: ['generatedscripts', 'logs', 'projects', 'rawdata', 'Samplesheets'],
-#    machines: "{{ groups['user_interface'] }}" },
-]
 #
 # Sources, software and reference data to install/fetch.
 #
