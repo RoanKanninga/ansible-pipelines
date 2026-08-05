@@ -1,0 +1,19 @@
+---
+#
+# Group folder structures to construct on shared storage systems.
+#
+group_subfolder_structure: [
+  { group: 'umcg-atd',
+    lfs: 'tmp09',
+    mode: "{{ MODE_2770_HARD }}",
+    owner: '',
+    subfolders: ['generatedscripts', 'logs', 'projects', 'rawdata', 'Samplesheets', 'tmp'],
+    machines: "{{ groups['user_interface'] }}" },
+  { group: 'umcg-atd',
+    lfs: 'prm09',
+    mode: "{{ MODE_2750_HARD }}",
+    owner: 'umcg-atd-dm',
+    subfolders: ['generatedscripts', 'logs', 'projects', 'rawdata', 'Samplesheets'],
+    machines: "{{ groups['user_interface'] }}" },
+]
+...
