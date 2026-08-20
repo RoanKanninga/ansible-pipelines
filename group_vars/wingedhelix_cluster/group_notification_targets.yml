@@ -239,13 +239,13 @@ group_notification_targets:
   # ######################################################################################################################
   # # umcg-pgx group
   # ######################################################################################################################
-   - group: umcg-pgx
-     lfs: prm07
-     user: umcg-pgx-dm
-     type: notification_webhooks
-     analysis_phases: [copyProjectDataToPrm]
-     notification_target: hpc-helpdesk_and_researchers
-     machines: "{{ groups['chaperone'] }}"
+  - group: umcg-pgx
+    lfs: prm07
+    user: umcg-pgx-dm
+    type: notification_webhooks
+    analysis_phases: [copyProjectDataToPrm]
+    notification_target: hpc-helpdesk_and_researchers
+    machines: "{{ groups['chaperone'] }}"
   - group: umcg-pgx
     lfs: tmp07
     user: umcg-pgx-ateambot
