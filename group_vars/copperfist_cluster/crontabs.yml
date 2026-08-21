@@ -73,7 +73,6 @@ crontabs:
   - name: Trendanalysis_copyQCDataToTmp  # Unique ID required to update existing cronjob: do not modify.
     user: umcg-atd-ateambot
     machines: "{{ groups['chaperone'] | default([]) }}"
-    disable: true
     weekday: '0'
     minute: '0'
     hour: '6'
@@ -83,7 +82,6 @@ crontabs:
   - name: Trendanalysis_trendAnalyse  # Unique ID required to update existing cronjob: do not modify.
     user: umcg-atd-ateambot
     machines: "{{ groups['user_interface'] | default([]) }}"
-    disable: true
     weekday: '0'
     minute: '0'
     hour: '12'
@@ -92,7 +90,6 @@ crontabs:
          trendAnalyse.sh -g umcg-atd"
   - name: Trendanalysis_copyTrendAnalysisDataToPrm  # Unique ID required to update existing cronjob: do not modify.
     user: umcg-atd-dm
-    disable: true
     machines: "{{ groups['chaperone'] | default([]) }}"
     weekday: '0'
     minute: '0'
@@ -317,7 +314,6 @@ crontabs:
   - name: Trendanalysis_copyQCDataToTmp  # Unique ID required to update existing cronjob: do not modify.
     user: umcg-gd-ateambot
     machines: "{{ groups['chaperone'] | default([]) }}"
-    disable: false
     weekday: '0'
     minute: '0'
     hour: '6'
@@ -327,7 +323,6 @@ crontabs:
   - name: Trendanalysis_trendAnalyse  # Unique ID required to update existing cronjob: do not modify.
     user: umcg-gd-ateambot
     machines: "{{ groups['user_interface'] | default([]) }}"
-    disable: false
     weekday: '0'
     minute: '0'
     hour: '12'
@@ -336,7 +331,6 @@ crontabs:
          trendAnalyse.sh -g umcg-gd"
   - name: Trendanalysis_copyTrendAnalysisDataToPrm  # Unique ID required to update existing cronjob: do not modify.
     user: umcg-gd-dm
-    disable: false
     machines: "{{ groups['chaperone'] | default([]) }}"
     weekday: '0'
     minute: '0'
